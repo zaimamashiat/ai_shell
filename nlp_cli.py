@@ -20,6 +20,9 @@ def execute_command(command: str):
     if "open" in command and "google" in command:
         print("Opening Google...")
         webbrowser.open('https://www.google.com')
+    elif 'nlp_cli.py' in sys.argv[0]:
+        print("The script is already running. Exiting to prevent infinite terminal openings.")
+        sys.exit()
 
     elif "list all files" in command or "list files" in command:
         print("Listing files in the current directory...")
