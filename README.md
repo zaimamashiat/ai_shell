@@ -1,4 +1,3 @@
-Here's an updated version of the description with the installation and running instructions:
 
 ---
 
