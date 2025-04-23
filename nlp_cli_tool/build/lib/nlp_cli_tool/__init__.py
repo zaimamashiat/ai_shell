@@ -247,27 +247,8 @@ def backup_file(file_name):
     else:
         print(f"File {file_name} not found!")
 
-# Function to open in a new terminal window and execute the script
-def open_in_new_window(script_name):
-    if os.name == 'nt':  # Windows
-        subprocess.Popen(["start", "cmd", "/K", f"python {script_name}"], shell=True)
-    elif os.name == 'posix':  # Linux/Mac
-        try:
-            subprocess.Popen(["gnome-terminal", "--", "python3", script_name])  # Linux GNOME terminal
-        except FileNotFoundError:
-            try:
-                subprocess.Popen(["xterm", "-e", f"python3 {script_name}"])  # Linux Xterm
-            except FileNotFoundError:
-                subprocess.Popen(["osascript", "-e", f'tell application "Terminal" to do script "python3 {script_name}"'])  # macOS
-        except Exception as e:
-            subprocess.Popen(["osascript", "-e", f'tell application "Terminal" to do script "python3 {script_name}"'])  # Fallback for macOS
-    else:
-        print("Unsupported OS for opening a new terminal window.")
-
 if __name__ == "__main__":
-    script_name = "nlp_cli.py"  # Replace this with the actual name of the script
-    open_in_new_window(script_name)
-
+    # Display the current working directory and ask for user input
     current_directory = os.getcwd()
     print(f"[Current Directory: {current_directory}] Enter command: ", end="")
 

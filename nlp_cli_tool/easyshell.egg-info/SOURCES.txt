@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+easyshell.egg-info/PKG-INFO
+easyshell.egg-info/SOURCES.txt
+easyshell.egg-info/dependency_links.txt
+easyshell.egg-info/entry_points.txt
+easyshell.egg-info/top_level.txt
+nlp_cli_tool/__init__.py
+nlp_cli_tool/__main__.py

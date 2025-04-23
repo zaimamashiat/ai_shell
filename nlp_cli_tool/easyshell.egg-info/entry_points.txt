@@ -1,0 +1,2 @@
+[console_scripts]
+easyshell = nlp_cli_tool.main:main
